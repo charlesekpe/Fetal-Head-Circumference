@@ -12,4 +12,6 @@ We will train a model to predict the HC of any ultrasound image.
 The size of each 2D ultrasound image is 800 by 540 pixels with a pixel size ranging from 0.052 to 0.326 mm.
 One challenge of this task, is the low pixel size, and hence treating this as a regression task will have alot of shortcomings.
 
-We will attempt a **PyTorch** implementation of a **U-Net** model for the segmentation of ultrasound images in order to estimate the
+We will attempt a **PyTorch** implementation of a **U-Net** model for the segmentation of ultrasound images in order to estimate the HC.
+
+The approach employed to solve the problem was to **segment** the **fetal head** followed by using **Hough transform** to fit the ellipse. The **Unet** model was trained to segment the ultrasound images and ellipse fitting was performed using the **OpenCV** implementation of **Hough transforms**.
