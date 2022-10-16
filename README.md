@@ -17,3 +17,5 @@ One challenge of this task, is the low pixel size, and hence treating this as a 
 We will attempt a **PyTorch** implementation of a **U-Net** model for the segmentation of ultrasound images in order to estimate the HC.
 
 The approach employed to solve the problem was to **segment** the **fetal head** followed by using **Hough transform** to fit the ellipse. The **Unet** model was trained to segment the ultrasound images and ellipse fitting was performed using the **OpenCV** implementation of **Hough transforms**.
+
+![alt text](./images/bannerV3_V5OH10E.x20.jpeg?raw=true)
