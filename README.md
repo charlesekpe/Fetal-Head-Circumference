@@ -1,6 +1,8 @@
 # Fetal-Head-Circumference
 _Automated measurement of fetal head circumference_
 
+![alt text](./images/401db3_826b0e5521f5446c8e5307c8ca949fcd_mv2.png?raw=true)
+
 During pregnancy, ultrasound imaging is used to measure fetal biometrics. One of these measurements is the **fetal head circumference (HC)**.
 
 The HC can be used to estimate the gestational age and monitor growth of the fetus. The HC is measured in a specific cross section of the fetal head, which is called the standard plane.
