@@ -22,7 +22,9 @@ The approach employed to solve the problem was to **segment** the **fetal head**
 ![alt text](./images/bannerV3_V5OH10E.x20.jpeg?raw=true)
 
 **_Training Loss_**
+
 ![alt text](./images/loss_graph.png?raw=true)
 
 **_Predictions_**
+
 ![alt text](./images/prediction.png?raw=true)
