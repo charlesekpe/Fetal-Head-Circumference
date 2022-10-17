@@ -8,7 +8,7 @@ During pregnancy, ultrasound imaging is used to measure fetal biometrics. One of
 The HC can be used to estimate the gestational age and monitor growth of the fetus. The HC is measured in a specific cross section of the fetal head, which is called the standard plane.
 
 The dataset for this model contains a total of 999 two-dimensional (2D) ultrasound images of the standard plane that can be used to measure the HC.
-
+https://hc18.grand-challenge.org/
 We will train a model to predict the HC of any ultrasound image.
 
 The size of each 2D ultrasound image is 800 by 540 pixels with a pixel size ranging from 0.052 to 0.326 mm.
