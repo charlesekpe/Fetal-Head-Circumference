@@ -1,4 +1,5 @@
 from tqdm import tqdm
+import numpy as np
 import torch
 import config
 from utils import (
@@ -24,9 +25,6 @@ def train_fn(model, criterion, optimizer, train_generator, val_generator):
         loss.backward()
         optimizer.step()
 
-        if ith_batch % 50 == 0:
-            print('Epoch: ', e + 1, 'Batch: ', ith_batch, 'Current Loss: ', loss.item())
-
         train_running_loss += loss.item()
 
     with torch.no_grad():    
@@ -44,6 +42,7 @@ def train_fn(model, criterion, optimizer, train_generator, val_generator):
             val_loss = 0.3 * dice_loss(out_val, y_val)  + 0.7 * criterion(y_out, y_val)
 
             validation_running_loss += val_loss.item()
+    return train_running_loss, validation_running_loss
             
 def main():
     model = UNet(1, 1).to(config.device)
@@ -54,8 +53,8 @@ def main():
     train_running_loss_history = []
     validation_running_loss_history =[]
 
-    for e in range(epochs):
-        train_fn(model, criterion, optimizer, train_generator, val_generator)
+    for e in range(config.EPOCHS):
+        train_running_loss, validation_running_loss = train_fn(model, criterion, optimizer, train_generator, val_generator)
         print("================================================================================")
         print("Epoch {} completed".format(e + 1))
 
