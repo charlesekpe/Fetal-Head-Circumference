@@ -78,7 +78,7 @@ class Data(Dataset):
         if self.transform:
             x = self.transform['x'](x)
             y = self.transform['y'](y)
-    return x, y
+        return x, y
 
 class HeadDataset(Dataset):
     '''
