@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import cv2
 
 import torch
 from torchvision import transforms
@@ -13,8 +14,8 @@ from utils import (
     get_head_loader
 )
 
-train_running_loss_history = np.load(train_running_loss_history)
-validation_running_loss_history = np.load(validation_running_loss_history)
+train_running_loss_history = np.load('train_running_loss_history.npy')
+validation_running_loss_history = np.load('validation_running_loss_history.npy')
 
 plt.plot(train_running_loss_history, label = 'Train Loss')
 plt.plot(validation_running_loss_history, label = 'Validation Loss')
